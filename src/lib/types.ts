@@ -1,5 +1,5 @@
 export type Persona = "student" | "lecturer" | "ops";
-export type EdgeEventType = "NFC_TAP" | "EARLY_EXIT" | "ROOM_EMPTY" | "ROOM_OCCUPIED" | "MC_VALID" | "MC_TAMPER" | "QUIZ_COMPLETE" | "RESET" | "HVAC_ON" | "HVAC_OFF" | "LIGHTS_ON" | "LIGHTS_OFF";
+export type EdgeEventType = "NFC_TAP" | "EARLY_EXIT" | "ROOM_EMPTY" | "ROOM_OCCUPIED" | "MC_VALID" | "MC_TAMPER" | "QUIZ_COMPLETE" | "RESET" | "HVAC_ON" | "HVAC_OFF" | "LIGHTS_ON" | "LIGHTS_OFF"| "BOOT";
 
 export type AuditEvent = {
   id: string;
@@ -14,7 +14,7 @@ export type AuditEvent = {
 
 export type EdgeSnapshot = {
   nodeId: string;
-  event: EdgeEventType | "BOOT";
+  event: EdgeEventType;
   timestamp: string;
   eventId: string;
   occupancy: number;
